@@ -34,7 +34,7 @@
 #include <xc.h> // include processor files - each processor file is guarded.  
 
 /* definição da velocidade de relógio para a função delay */
- 
+
 #define CLEAR_LCD 0b00000001
 #define LINE1 0b10000000 
 #define LINE2 0b11000000
@@ -51,41 +51,48 @@
 /*definição geral de que o botao de DECREMENTAR é o PORTBbits.RB4*/
 #define BOT_DOWN PORTBbits.RB4
 /*definição global da variável TEMPERATURA desejada*/
-volatile int temperatura_desejada=850;
+volatile int temperatura_desejada = 850;
 /*definição global da variável TEMPERATURA real do sensor de temperatura*/
-volatile int temperatura_real=550;
+volatile int temperatura_real = 550;
 /*definição global da variável ERRO_TEMPERATURA para verificar se a res tem ou nao de trabalhar*/
 volatile int erro_temperatura;
 /*definição global da variável TIME_desejado*/
-volatile int time_desejado = 3000;
+volatile int time_desejado = 30;
 /*definição global da variável TIME que falta*/
-volatile int time_real = 3000;
+volatile int time_real = 30;
 /*definição global da variável ERRO_TEMPO para verificar se a res ainda trablha ou nao */
 volatile int erro_tempo;
 /*definição global da variável menu*/
-volatile int menu_var = 0;
+volatile unsigned char menu_var = 0;
 /*definição global da variável emergencia*/
-volatile int emergencia_var = 0;
+volatile unsigned char emergencia_var = 0;
 /*variaveis para o menu*/
-unsigned char menu_tmp = 1, menu_act = 0;
+volatile unsigned char menu_tmp = 1, menu_act = 0;
 /*variavel para a eusart*/
-unsigned char teste;
+volatile unsigned char teste;
 /*variavel para a eusart*/
-unsigned char eusart_var=0;
+volatile unsigned char eusart_var = 0;
 /*variavel para a up_eusart*/
-unsigned char up_eusart=0;
-unsigned char eusart_Aux = 1;
+volatile unsigned char up_eusart = 0;
+volatile unsigned char eusart_Aux = 1;
 /*variavel para inicializar a o programa atraves da eusart*/
-unsigned char iniciar = 0;
+volatile unsigned char iniciar = 0;
 /*variavel para verificar se a temperatura está entre 600 e 850 graus*/
-unsigned char verifica_temp = 0;
+volatile unsigned char verifica_temp = 0;
 /*variavel para o alarme de quando o tempo chegar ao fim (time_real == 0)*/
-unsigned char time_off_alarme = 0;
+volatile unsigned char time_off_alarme = 0;
+/*variavel para o alarme no LCD de quando o tempo chegar ao fim (time_real == 0)*/
+volatile unsigned char verifica_LCD = 0;
 /*variavel para verificar o que imprimir no LCD*/
-unsigned char cnt_menu = 0;
+volatile unsigned char cnt_menu = 0;
+volatile unsigned char estado = 0;
+volatile unsigned char lastEstado = 1;
 /*variavel para saber o valor de pwm*/
-unsigned char valor_pwm = 0;
-int clk250ms = 0, clk500ms = 0, clk1s = 0;
+volatile unsigned char valor_pwm = 0;
+/*variavel para o alarme de temperatura fora da gama*/
+volatile unsigned char time_2s = 0;
+volatile unsigned char clk250ms = 0, clk500ms = 0, clk1s = 0, clk2s = 0;
+;
 
 char tmp_str[21];
 

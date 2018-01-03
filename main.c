@@ -125,78 +125,78 @@ void main(void) {
      *  |  TEMPO:            /            |
      * 
      */
-//    /**** LINE 1*****/
-//    WriteCmdXLCD(LINE1);
-//    while (BusyXLCD());
-//    //        012345678901234567890123456789012
-//    putsXLCD(" SISTEMA CONTROLO DA TEMPERATURA ");
-//    while (BusyXLCD());
-//
-//    /**** LINE 2*****/
-//    WriteCmdXLCD(LINE2);
-//    while (BusyXLCD());
-//    //        012345678901234567890123456789012
-//    putsXLCD("      DE UM FORNO DE CERAMICA    ");
-//    while (BusyXLCD());
-//    __delay_ms(3000);
-//
-//    /*
-//     * NOME DOS ALUNOS
-//     */
-//    /**** LINE 1*****/
-//    WriteCmdXLCD(LINE1);
-//    while (BusyXLCD());
-//    //        01234567890123456789012345678901
-//    putsXLCD("-> JO");
-//    while (BusyXLCD());
-//    putcXLCD(0b0000); //chama o Ã para o JOÃO 
-//    while (BusyXLCD());
-//    putsXLCD("O GON");
-//    while (BusyXLCD());
-//    putcXLCD(0b0001); //chama o Ç para o GONÇALVES
-//    while (BusyXLCD());
-//    putsXLCD("ALVES     n");
-//    while (BusyXLCD());
-//    putcXLCD(0b0010); //chama o 'º' para o nº:
-//    while (BusyXLCD());
-//    putsXLCD(": 2160782");
-//    while (BusyXLCD());
-//
-//    /**** LINE 2*****/
-//    WriteCmdXLCD(LINE2);
-//    while (BusyXLCD());
-//    //        01234567890123456789012345678901
-//    putsXLCD("-> MARCELO FERREIRA   n");
-//    while (BusyXLCD());
-//    putcXLCD(0b0010); //chama o 'º' para nº:
-//    while (BusyXLCD());
-//    putsXLCD(": 2151750");
-//    while (BusyXLCD());
-//    __delay_ms(3000);
-//
-//    /**** LINE 1*****/
-//    WriteCmdXLCD(LINE1);
-//    while (BusyXLCD());
-//    //        012345678901234567890123456789012
-//    putsXLCD("      A INICIAR PROGRAMA....     ");
-//    while (BusyXLCD());
-//    /**** LINE 2*****/
-//    WriteCmdXLCD(LINE2);
-//    while (BusyXLCD());
-//    //        012345678901234567890123456789012
-//    putsXLCD("                                 ");
-//    while (BusyXLCD());
-//    __delay_ms(3500);
-//
-//    /**** LINE 2*****/
-//    WriteCmdXLCD(LINE2);
-//    while (BusyXLCD());
-//    //        012345678901234567890123456789012
-//    putsXLCD("      A PROCESSAR....            ");
-//    while (BusyXLCD());
-//    __delay_ms(3500);
+    //    /**** LINE 1*****/
+    //    WriteCmdXLCD(LINE1);
+    //    while (BusyXLCD());
+    //    //        012345678901234567890123456789012
+    //    putsXLCD(" SISTEMA CONTROLO DA TEMPERATURA ");
+    //    while (BusyXLCD());
+    //
+    //    /**** LINE 2*****/
+    //    WriteCmdXLCD(LINE2);
+    //    while (BusyXLCD());
+    //    //        012345678901234567890123456789012
+    //    putsXLCD("      DE UM FORNO DE CERAMICA    ");
+    //    while (BusyXLCD());
+    //    __delay_ms(3000);
+    //
+    //    /*
+    //     * NOME DOS ALUNOS
+    //     */
+    //    /**** LINE 1*****/
+    //    WriteCmdXLCD(LINE1);
+    //    while (BusyXLCD());
+    //    //        01234567890123456789012345678901
+    //    putsXLCD("-> JO");
+    //    while (BusyXLCD());
+    //    putcXLCD(0b0000); //chama o Ã para o JOÃO 
+    //    while (BusyXLCD());
+    //    putsXLCD("O GON");
+    //    while (BusyXLCD());
+    //    putcXLCD(0b0001); //chama o Ç para o GONÇALVES
+    //    while (BusyXLCD());
+    //    putsXLCD("ALVES     n");
+    //    while (BusyXLCD());
+    //    putcXLCD(0b0010); //chama o 'º' para o nº:
+    //    while (BusyXLCD());
+    //    putsXLCD(": 2160782");
+    //    while (BusyXLCD());
+    //
+    //    /**** LINE 2*****/
+    //    WriteCmdXLCD(LINE2);
+    //    while (BusyXLCD());
+    //    //        01234567890123456789012345678901
+    //    putsXLCD("-> MARCELO FERREIRA   n");
+    //    while (BusyXLCD());
+    //    putcXLCD(0b0010); //chama o 'º' para nº:
+    //    while (BusyXLCD());
+    //    putsXLCD(": 2151750");
+    //    while (BusyXLCD());
+    //    __delay_ms(3000);
+    //
+    //    /**** LINE 1*****/
+    //    WriteCmdXLCD(LINE1);
+    //    while (BusyXLCD());
+    //    //        012345678901234567890123456789012
+    //    putsXLCD("      A INICIAR PROGRAMA....     ");
+    //    while (BusyXLCD());
+    //    /**** LINE 2*****/
+    //    WriteCmdXLCD(LINE2);
+    //    while (BusyXLCD());
+    //    //        012345678901234567890123456789012
+    //    putsXLCD("                                 ");
+    //    while (BusyXLCD());
+    //    __delay_ms(3500);
+    //
+    //    /**** LINE 2*****/
+    //    WriteCmdXLCD(LINE2);
+    //    while (BusyXLCD());
+    //    //        012345678901234567890123456789012
+    //    putsXLCD("      A PROCESSAR....            ");
+    //    while (BusyXLCD());
+    //    __delay_ms(3500);
 
-    
+
     while (1) {
 
         /*
@@ -209,7 +209,7 @@ void main(void) {
          *      " TEMPO: FALTA / PREDEFINIDO"
          */
 
-        /*atualizar vars de 500ms em 500ms no LCD*/
+        /*atualizar menu de 500ms em 500ms no LCD*/
         while (clk500ms) {
 
             ADC_StartConversion();
@@ -282,36 +282,71 @@ void main(void) {
                     putsXLCD(tmp_str);
                     while (BusyXLCD());
 
-                    if (temperatura_real < 600 || temperatura_real > 850) {
-                        WriteCmdXLCD(LINE2);
-                        while (BusyXLCD());
-                        //        12345678901234567890123456789012
-                        putsXLCD("  Temperatura fora da gama      ");
-                        while (BusyXLCD());
-                    } else {
-                        WriteCmdXLCD(LINE2);
-                        while (BusyXLCD());
-                        //        12345678901234567890123456789012
-                        putsXLCD("  Temperatura dentro da gama    ");
-                        while (BusyXLCD());
-                    }
+                    if (verifica_LCD == 0) {
 
+                        if (estado == 0) {
+                            WriteCmdXLCD(LINE2);
+                            while (BusyXLCD());
+                            //        12345678901234567890123456789012
+                            putsXLCD("  Temperatura dentro da gama      ");
+                            while (BusyXLCD());
+                        } else if (clk2s) {
+                            if (estado == 1) {
+                                WriteCmdXLCD(LINE2);
+                                while (BusyXLCD());
+                                //        12345678901234567890123456789012
+                                putsXLCD("  Temperatura abaixo da gama    ");
+                                while (BusyXLCD());
+                            }
+                            if (estado == 2) {
+                                WriteCmdXLCD(LINE2);
+                                while (BusyXLCD());
+                                //        12345678901234567890123456789012
+                                putsXLCD("  Temperatura acima da gama    ");
+                                while (BusyXLCD());
+                            }
+                        }
+                        verifica_LCD = 1;
+                    }
                 } else {
                     cnt_menu = -1;
                 }
             }
+
+
 
             erro_temperatura = temperatura_real - temperatura_desejada;
             cnt_menu++;
 
         }/*fim do while de atualizar LCD*/
 
-        if (temperatura_real < 600) {
-            LED_VERDE_LAT = 1;
+        if (estado != lastEstado) {
+            lastEstado = estado;
+            verifica_LCD = 0;
         }
-        
-        if(temperatura_real > 850){
-            LED_VERMELHO_LAT = 1;
+
+        if (temperatura_real >= 600 && temperatura_real <= 850) {
+            estado = 0;
+            LED_VERDE_LAT = 0;
+            LED_VERMELHO_LAT = 0;
+        }
+
+        if (time_2s == 2) {
+
+            if (temperatura_real < 600) {
+                estado = 1;
+                EPWM1_LoadDutyValue(15);
+                LED_VERDE_LAT = ~LED_VERDE_LAT;
+                EPWM1_LoadDutyValue(0);
+            }
+
+            if (temperatura_real > 850) {
+                estado = 2;
+                EPWM1_LoadDutyValue(15);
+                LED_VERMELHO_LAT = ~LED_VERMELHO_LAT;
+                EPWM1_LoadDutyValue(0);
+            }
+            time_2s = 0;
         }
 
         if (iniciar == 1) {
@@ -327,23 +362,30 @@ void main(void) {
 
                     do {
 
-                        EPWM1_LoadDutyValue(50);
+                        EPWM1_LoadDutyValue(5);
 
-                        /**** LINE 1*****/
-                        WriteCmdXLCD(LINE1);
-                        while (BusyXLCD());
-                        //        012345678901234567890123456789012
-                        putsXLCD("       *  TEMPO TERMINOU  *      "); //tem de vir a duas variaveis 
-                        while (BusyXLCD());
+                        if (verifica_LCD == 0) {
 
-                        /**** LINE 2*****/
-                        WriteCmdXLCD(LINE2);
-                        while (BusyXLCD());
-                        //        012345678901234567890123456789012
-                        putsXLCD("PRESS SELECT PARA DESLIGAR ALARME");
-                        while (BusyXLCD());
+                            /**** LINE 1*****/
+                            WriteCmdXLCD(LINE1);
+                            while (BusyXLCD());
+                            //        012345678901234567890123456789012
+                            putsXLCD("       *  TEMPO TERMINOU  *      "); //tem de vir a duas variaveis 
+                            while (BusyXLCD());
 
-                    } while (BOT_SELECT == 1);
+                            /**** LINE 2*****/
+                            WriteCmdXLCD(LINE2);
+                            while (BusyXLCD());
+                            //        012345678901234567890123456789012
+                            putsXLCD("PRESS SELECT PARA DESLIGAR ALARME");
+                            while (BusyXLCD());
+
+                            verifica_LCD = 1;
+                        }
+
+                    } while (BOT_SELECT == 0);
+
+                    verifica_LCD = 0;
 
                 } else {
 

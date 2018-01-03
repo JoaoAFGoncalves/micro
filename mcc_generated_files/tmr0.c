@@ -138,10 +138,11 @@ void TMR0_ISR(void)
     clk250ms = !clk250ms;
     if(clk250ms)
         clk500ms = !clk500ms;
-    if(clk250ms && clk500ms){
+    if(clk250ms && clk500ms)
         clk1s = !clk1s;
-//        time_real--;
-    }
+    if(clk250ms && clk500ms && clk1s)
+        clk2s = !clk2s;
+    
     
     
     // clear the TMR0 interrupt flag

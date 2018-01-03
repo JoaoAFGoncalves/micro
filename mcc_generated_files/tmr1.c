@@ -164,7 +164,12 @@ void TMR1_ISR(void) {
 
         // reset ticker counter
         CountCallBack = 0;
-         
+        
+        time_2s++;
+        
+//        if (time_2s == 2){
+//            time_2s = 0;
+//        }
         if (time_real > 0) {
             time_real--;
             time_off_alarme = 0;
