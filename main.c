@@ -53,7 +53,7 @@
 /* header file para a biblioteca XLCD */
 #include "xlcd.h"
 
-/* definição da velocidade de relógio para a função delay */
+/* definiï¿½ï¿½o da velocidade de relï¿½gio para a funï¿½ï¿½o delay */
 #define _XTAL_FREQ 8000000 
 
 void menu();
@@ -101,7 +101,7 @@ void main(void) {
     // Disable the Peripheral Interrupts
     //INTERRUPT_PeripheralInterruptDisable();
 
-    int temp, cnt1 = 0, tempmin = 25;
+    //int temp, cnt1 = 0, tempmin = 25;
 
     //CCP1CONbits.CCP1M = 0;
     EPWM1_LoadDutyValue(0);
@@ -110,12 +110,12 @@ void main(void) {
     inicializacao_XLCD();
 
     /*
-     * APRESENTÇÃO:
+     * APRESENTï¿½ï¿½O:
      * 
      *  | SISTEMA CONTROLO DA TEMPERATURA |
      *  |      DE UM FORNO DE CERAMICA    |
      *
-     *  |-> JOÃO GONÇALVES     n: 2160782 |
+     *  |-> JOï¿½O GONï¿½ALVES     n: 2160782 |
      *  |-> MARCELO FERREIRA   n: 2151750 |
      * 
      *  |      A INICIAR PROGRAMA....     |
@@ -149,15 +149,15 @@ void main(void) {
     //    //        01234567890123456789012345678901
     //    putsXLCD("-> JO");
     //    while (BusyXLCD());
-    //    putcXLCD(0b0000); //chama o Ã para o JOÃO 
+    //    putcXLCD(0b0000); //chama o ï¿½ para o JOï¿½O 
     //    while (BusyXLCD());
     //    putsXLCD("O GON");
     //    while (BusyXLCD());
-    //    putcXLCD(0b0001); //chama o Ç para o GONÇALVES
+    //    putcXLCD(0b0001); //chama o ï¿½ para o GONï¿½ALVES
     //    while (BusyXLCD());
     //    putsXLCD("ALVES     n");
     //    while (BusyXLCD());
-    //    putcXLCD(0b0010); //chama o 'º' para o nº:
+    //    putcXLCD(0b0010); //chama o 'ï¿½' para o nï¿½:
     //    while (BusyXLCD());
     //    putsXLCD(": 2160782");
     //    while (BusyXLCD());
@@ -168,7 +168,7 @@ void main(void) {
     //    //        01234567890123456789012345678901
     //    putsXLCD("-> MARCELO FERREIRA   n");
     //    while (BusyXLCD());
-    //    putcXLCD(0b0010); //chama o 'º' para nº:
+    //    putcXLCD(0b0010); //chama o 'ï¿½' para nï¿½:
     //    while (BusyXLCD());
     //    putsXLCD(": 2151750");
     //    while (BusyXLCD());
@@ -222,7 +222,7 @@ void main(void) {
                 putsXLCD("  TEMPERATURA:      /            ");
                 while (BusyXLCD());
                 WriteCmdXLCD(LINE1 + 27);
-                putcXLCD(0b0010); //chama o 'º' para ºC
+                putcXLCD(0b0010); //chama o 'ï¿½' para ï¿½C
                 while (BusyXLCD());
                 putsXLCD("C");
                 while (BusyXLCD());
@@ -398,7 +398,7 @@ void main(void) {
                     putsXLCD("  TEMPERATURA:      /            ");
                     while (BusyXLCD());
                     WriteCmdXLCD(LINE1 + 27);
-                    putcXLCD(0b0010); //chama o 'º' para ºC
+                    putcXLCD(0b0010); //chama o 'ï¿½' para ï¿½C
                     while (BusyXLCD());
                     putsXLCD("C");
                     while (BusyXLCD());
@@ -471,7 +471,7 @@ void main(void) {
             putsXLCD("  TEMPERATURA:      /            ");
             while (BusyXLCD());
             WriteCmdXLCD(LINE1 + 27);
-            putcXLCD(0b0010); //chama o 'º' para ºC
+            putcXLCD(0b0010); //chama o 'ï¿½' para ï¿½C
             while (BusyXLCD());
             putsXLCD("C");
             while (BusyXLCD());
@@ -498,7 +498,7 @@ void main(void) {
             putsXLCD("  TEMPERATURA:      /            ");
             while (BusyXLCD());
             WriteCmdXLCD(LINE1 + 27);
-            putcXLCD(0b0010); //chama o 'º' para ºC
+            putcXLCD(0b0010); //chama o 'ï¿½' para ï¿½C
             while (BusyXLCD());
             putsXLCD("C");
             while (BusyXLCD());
@@ -543,8 +543,8 @@ void delay_500ms() {
 void inicializacao_XLCD() {
 
     /*
-     * Inicialização do LCD:
-     * FOUR_BIT: Modo de ligação do display a 4 bits
+     * Inicializaï¿½ï¿½o do LCD:
+     * FOUR_BIT: Modo de ligaï¿½ï¿½o do display a 4 bits
      * LINES_5X7: Caracteres no display com tamanho 5 colunas por
      * 7 linhas
      *
@@ -572,7 +572,7 @@ void inicializacao_XLCD() {
     while (BusyXLCD());
     /*
      * Comando interno para o LCD:
-     * CLEAR_LCD: Limpa conteúdo do display
+     * CLEAR_LCD: Limpa conteï¿½do do display
      */
     WriteCmdXLCD(CLEAR_LCD);
     while (BusyXLCD());
@@ -581,7 +581,7 @@ void inicializacao_XLCD() {
      */
 
     /*
-     * 'Ã'
+     * 'ï¿½'
      */
     SetCGRamAddr(0b00000000);
     while (BusyXLCD());
@@ -603,7 +603,7 @@ void inicializacao_XLCD() {
     while (BusyXLCD());
 
     /**
-     * 'Ç'
+     * 'ï¿½'
      */
     SetCGRamAddr(0b00001000);
     while (BusyXLCD());
@@ -623,7 +623,7 @@ void inicializacao_XLCD() {
     while (BusyXLCD());
 
     /**
-     *  'º'
+     *  'ï¿½'
      */
     SetCGRamAddr(0b00010000);
     while (BusyXLCD());
@@ -663,43 +663,43 @@ void XLCD_menu_temperatura() {
     do {
 
         /*
-         *  quando o BOTÃO UP é pressionado envia o sinal de "1"
+         *  quando o BOTï¿½O UP ï¿½ pressionado envia o sinal de "1"
          *  BOTAO aqui serve para INCREMENTAR TEMPERATURA
          */
         if (BOT_UP == 1) {
-            /* liga o LED de sinalização RC5 para indicar que o botão ta  a sr pressionado */
+            /* liga o LED de sinalizaï¿½ï¿½o RC5 para indicar que o botï¿½o ta  a sr pressionado */
             LATCbits.LATC5 = 1;
             /* incrementa o contador para por a temperatura final */
             cnt1++;
-            /* ficar à espera para só incrememntar quando é precionado o botao */
+            /* ficar ï¿½ espera para sï¿½ incrememntar quando ï¿½ precionado o botao */
             while (BOT_UP == 1) {
 
             }
-            /* desliga o LED de sinalização RC5 para indicar que o botão já não 
-             está a ser pressionado */
+            /* desliga o LED de sinalizaï¿½ï¿½o RC5 para indicar que o botï¿½o jï¿½ nï¿½o 
+             estï¿½ a ser pressionado */
             LATCbits.LATC5 = 0;
         }
 
         /*
-         *  quando o BOTÃO DOWN é pressionado envia o sinal de "1"
+         *  quando o BOTï¿½O DOWN ï¿½ pressionado envia o sinal de "1"
          *  BOTAO aqui serve para DECREMENTAR TEMPERATURA
          */
         if (BOT_DOWN == 1) {
-            /* liga o LED de sinalização RC5 para indicar que o botão está a ser pressionado */
+            /* liga o LED de sinalizaï¿½ï¿½o RC5 para indicar que o botï¿½o estï¿½ a ser pressionado */
             LATCbits.LATC5 = 1;
             /* decrementa o contador para por a temperatura final */
             cnt1--;
-            /* ficar à espera para só incrememntar quando é precionado o botao */
+            /* ficar ï¿½ espera para sï¿½ incrememntar quando ï¿½ precionado o botao */
             while (BOT_DOWN == 1) {
 
             }
-            /* desliga o LED de sinalização RC5 para indicar que o botão já não 
-             está a ser pressionado */
+            /* desliga o LED de sinalizaï¿½ï¿½o RC5 para indicar que o botï¿½o jï¿½ nï¿½o 
+             estï¿½ a ser pressionado */
             LATCbits.LATC5 = 0;
         }
 
-        /* desliga o LED de sinalização RC5 para indicar que o botão já não 
-        está a ser pressionado */
+        /* desliga o LED de sinalizaï¿½ï¿½o RC5 para indicar que o botï¿½o jï¿½ nï¿½o 
+        estï¿½ a ser pressionado */
         //LATCbits.LATC5 = 0;
 
         if (cnt1 > 33)
@@ -739,43 +739,43 @@ void XLCD_menu_time() {
 
     do {
         /*
-         *  quando o BOTÃO UP é pressionado envia o sinal de "1"
+         *  quando o BOTï¿½O UP ï¿½ pressionado envia o sinal de "1"
          *  BOTAO aqui serve para INCREMENTAR TEMPO para o TEMPORIZADOR
          */
         if (BOT_UP == 1) {
-            /* liga o LED de sinalização RC5 para indicar que o botão esta  a ser pressionado */
+            /* liga o LED de sinalizaï¿½ï¿½o RC5 para indicar que o botï¿½o esta  a ser pressionado */
             LATCbits.LATC5 = 1;
             /* incrementa o contador para por o tempo para o temporizador */
             cnt2++;
-            /* ficar à espera para só incrememntar quando é precionado o botao */
+            /* ficar ï¿½ espera para sï¿½ incrememntar quando ï¿½ precionado o botao */
             while (BOT_UP == 1) {
 
             }
-            /* desliga o LED de sinalização RC5 para indicar que o botão já não 
-             está a ser pressionado */
+            /* desliga o LED de sinalizaï¿½ï¿½o RC5 para indicar que o botï¿½o jï¿½ nï¿½o 
+             estï¿½ a ser pressionado */
             LATCbits.LATC5 = 0;
         }
 
         /*
-         *  quando o BOTÃO DOWN é pressionado envia o sinal de "1"
+         *  quando o BOTï¿½O DOWN ï¿½ pressionado envia o sinal de "1"
          *  BOTAO aqui serve para DECREMENTAR TEMPO para o TEMPORIZADOR
          */
         if (BOT_DOWN == 1) {
-            /* liga o LED de sinalização RC5 para indicar que o botão está a ser pressionado */
+            /* liga o LED de sinalizaï¿½ï¿½o RC5 para indicar que o botï¿½o estï¿½ a ser pressionado */
             LATCbits.LATC5 = 1;
             /* decrementa o contador para por o tempo para o temporizador */
             cnt2--;
-            /* ficar à espera para só incrememntar quando é precionado o botao */
+            /* ficar ï¿½ espera para sï¿½ incrememntar quando ï¿½ precionado o botao */
             while (BOT_DOWN == 1) {
 
             }
-            /* desliga o LED de sinalização RC5 para indicar que o botão já não
-              está a ser pressionado */
+            /* desliga o LED de sinalizaï¿½ï¿½o RC5 para indicar que o botï¿½o jï¿½ nï¿½o
+              estï¿½ a ser pressionado */
             LATCbits.LATC5 = 0;
         }
 
-        /* desliga o LED de sinalização RC5 para indicar que o botão já não 
-        está a ser pressionado */
+        /* desliga o LED de sinalizaï¿½ï¿½o RC5 para indicar que o botï¿½o jï¿½ nï¿½o 
+        estï¿½ a ser pressionado */
         //LATCbits.LATC5 = 0;
 
         if (cnt2 > 200)
@@ -814,7 +814,7 @@ void interrup_emergencia() {
     WriteCmdXLCD(LINE2);
     while (BusyXLCD());
     //        0123456789012456789012345678901
-    putsXLCD("     !!!PARAGEM FORÇADA!!!     ");
+    putsXLCD("     !!!PARAGEM FORï¿½ADA!!!     ");
     while (BusyXLCD());
 
     //BUZZER a trabalhar a um PWM de 50%
@@ -833,7 +833,7 @@ void interrup_emergencia() {
     WriteCmdXLCD(LINE2);
     while (BusyXLCD());
     //0123456789012456789012345678901
-    putsXLCD("Press BOTAO EMERGÊNCIA  ");
+    putsXLCD("Press BOTAO EMERGï¿½NCIA  ");
     while (BusyXLCD());
 
     while (emergencia_var) {
@@ -883,18 +883,18 @@ void menu() {
     do {
         if (BOT_UP == 1) {
             menu_tmp++;
-            /* liga o LED de sinalização RC5 para indicar que o botão está a ser pressionado */
+            /* liga o LED de sinalizaï¿½ï¿½o RC5 para indicar que o botï¿½o estï¿½ a ser pressionado */
             LATCbits.LATC5 = 1;
             while (BOT_UP == 1);
-            /* desliga o LED de sinalização RC5 para indicar que o botão já não está a ser pressionado */
+            /* desliga o LED de sinalizaï¿½ï¿½o RC5 para indicar que o botï¿½o jï¿½ nï¿½o estï¿½ a ser pressionado */
             LATCbits.LATC5 = 0;
         }
         if (BOT_DOWN == 1) {
             menu_tmp--;
-            /* liga o LED de sinalização RC5 para indicar que o botão está a ser pressionado */
+            /* liga o LED de sinalizaï¿½ï¿½o RC5 para indicar que o botï¿½o estï¿½ a ser pressionado */
             LATCbits.LATC5 = 1;
             while (BOT_DOWN == 1);
-            /* desliga o LED de sinalização RC5 para indicar que o botão já não está a ser pressionado */
+            /* desliga o LED de sinalizaï¿½ï¿½o RC5 para indicar que o botï¿½o jï¿½ nï¿½o estï¿½ a ser pressionado */
             LATCbits.LATC5 = 0;
         }
 
@@ -903,7 +903,7 @@ void menu() {
         if (menu_tmp < 1)
             menu_tmp = 2;
 
-        //        /* desliga o LED de sinalização RC5 para indicar que o botão está a ser pressionado */
+        //        /* desliga o LED de sinalizaï¿½ï¿½o RC5 para indicar que o botï¿½o estï¿½ a ser pressionado */
         //        LATCbits.LATC5 = 0;
         WriteCmdXLCD(LINE1 + 31);
         while (BusyXLCD());
@@ -915,10 +915,10 @@ void menu() {
     } while (BOT_SELECT == 0);
 
     if (BOT_SELECT == 1) {
-        /* liga o LED de sinalização RC5 para indicar que o botão está a ser pressionado */
+        /* liga o LED de sinalizaï¿½ï¿½o RC5 para indicar que o botï¿½o estï¿½ a ser pressionado */
         LATCbits.LATC5 = 1;
         menu_act = menu_tmp;
-        /* desliga o LED de sinalização RC5 para indicar que o botão já não está a ser pressionado */
+        /* desliga o LED de sinalizaï¿½ï¿½o RC5 para indicar que o botï¿½o jï¿½ nï¿½o estï¿½ a ser pressionado */
         LATCbits.LATC5 = 0;
     }
 
@@ -947,7 +947,7 @@ void eusart() {
     printf("\r 2- Ligar o sistema de controlo de temperatura do forno de ceramica");
     printf("\r 3- Visualizar o valor atual da temperatura do forno");
     printf("\r 4- Visualizar o valor atual programado para a temperatura de referencia");
-    printf("\r 5- Programar um novo valor de temperatura de referência para o forno");
+    printf("\r 5- Programar um novo valor de temperatura de referï¿½ncia para o forno");
     printf("\r 6- Ativar EMERGENCIA");
     printf("\r 7- Ligar o sistema de controlo de temperatura do forno de ceramica");
     printf("\r OPCAO: ");
@@ -991,11 +991,11 @@ void eusart_case() {
             printf("\r Temperatura atual: %0.2d", temperatura_real);
             if (temperatura_real < 600) {
                 printf("\r AVISO!!");
-                printf("\r Temperatura ainda se encontra abaixo da gama [600,850] ºC");
+                printf("\r Temperatura ainda se encontra abaixo da gama [600,850] ï¿½C");
             } else {
                 if (temperatura_real > 850) {
                     printf("\r AVISO!!");
-                    printf("\r Temperatura ultrapassou a gama [600,850] ºC");
+                    printf("\r Temperatura ultrapassou a gama [600,850] ï¿½C");
                 }
             }
             break;
@@ -1007,11 +1007,11 @@ void eusart_case() {
             printf("\r Temperatura desejada: %0.2d", temperatura_desejada);
             if (temperatura_desejada < 600) {
                 printf("\r AVISO!!");
-                printf("\r Temperatura programada para um valor abaixo da gama [600,850] ºC");
+                printf("\r Temperatura programada para um valor abaixo da gama [600,850] ï¿½C");
             } else {
                 if (temperatura_desejada > 850) {
                     printf("\r AVISO!!");
-                    printf("\r Temperatura programada para um valor acima da gama [600,850] ºC");
+                    printf("\r Temperatura programada para um valor acima da gama [600,850] ï¿½C");
                 }
             }
             break;
@@ -1024,7 +1024,7 @@ void eusart_case() {
             printf("\r PRECIONE: ");
             printf("\r 8 - para aumentar a temperatura.");
             printf("\r 2 - para diminuir a temperatura.");
-            printf("\r 0 - para comfirmar a alteração da temperatura desejada");
+            printf("\r 0 - para comfirmar a alteraï¿½ï¿½o da temperatura desejada");
             alterar_temperatura_eusart();
             break;
         case '6':
@@ -1052,37 +1052,37 @@ void alterar_temperatura_eusart() {
         do {
 
             /*
-             *  quando o BOTÃO UP é pressionado envia o sinal de "1"
+             *  quando o BOTï¿½O UP ï¿½ pressionado envia o sinal de "1"
              *  BOTAO aqui serve para INCREMENTAR TEMPERATURA
              */
             if (BOT_UP == 1) {
-                /* liga o LED de sinalização RC5 para indicar que o botão ta  a sr pressionado */
+                /* liga o LED de sinalizaï¿½ï¿½o RC5 para indicar que o botï¿½o ta  a sr pressionado */
                 LATCbits.LATC5 = 1;
                 /* incrementa o contador para por a temperatura final */
                 cnt1++;
-                /* ficar à espera para só incrememntar quando é precionado o botao */
+                /* ficar ï¿½ espera para sï¿½ incrememntar quando ï¿½ precionado o botao */
                 while (BOT_UP == 1) {
 
                 }
             }
 
             /*
-             *  quando o BOTÃO DOWN é pressionado envia o sinal de "1"
+             *  quando o BOTï¿½O DOWN ï¿½ pressionado envia o sinal de "1"
              *  BOTAO aqui serve para DECREMENTAR TEMPERATURA
              */
             if (BOT_DOWN == 1) {
-                /* liga o LED de sinalização RC5 para indicar que o botão está a ser pressionado */
+                /* liga o LED de sinalizaï¿½ï¿½o RC5 para indicar que o botï¿½o estï¿½ a ser pressionado */
                 LATCbits.LATC5 = 1;
                 /* decrementa o contador para por a temperatura final */
                 cnt1--;
-                /* ficar à espera para só incrememntar quando é precionado o botao */
+                /* ficar ï¿½ espera para sï¿½ incrememntar quando ï¿½ precionado o botao */
                 while (BOT_DOWN == 1) {
 
                 }
             }
 
-            /* desliga o LED de sinalização RC5 para indicar que o botão já não 
-            está a ser pressionado */
+            /* desliga o LED de sinalizaï¿½ï¿½o RC5 para indicar que o botï¿½o jï¿½ nï¿½o 
+            estï¿½ a ser pressionado */
             //LATCbits.LATC5 = 0;
 
             if (cnt1 > 33)
@@ -1108,7 +1108,7 @@ void alterar_temperatura_eusart() {
             printf("\r Temperatura alterada com sucesso!");
         } else {
             verifica_temp = 0;
-            printf("\r Temperatura invalida, deverá de escolher uma temperatura entre os 600 e o 850 graus!");
+            printf("\r Temperatura invalida, deverï¿½ de escolher uma temperatura entre os 600 e o 850 graus!");
         }
     } while (verifica_temp == 0);
 }
