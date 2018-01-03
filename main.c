@@ -536,8 +536,8 @@ void main(void) {
 
 void delay_500ms() {
     /* aguarda 500 ms */
-    for (int j = 0; j < 100; j++)
-        __delay_ms(5);
+    for (int j = 0; j < 10; j++)
+        __delay_ms(50);
 }
 
 void inicializacao_XLCD() {
